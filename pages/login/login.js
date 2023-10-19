@@ -17,7 +17,7 @@ btnLogin.addEventListener('click', function(){
             else if( Username.lenght<=5)
                 alert("There are not enough characters");
                 else{
-                    location.replace('pages/home/home.html');
+                    location.replace('/pages/home/home.html');
                 }
                     
 })
