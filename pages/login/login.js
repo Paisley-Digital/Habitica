@@ -1,23 +1,11 @@
-let Username=document.getElementById('Username').value;
-let Password=document.getElementById('Password').value;
-let btnLogin=document.getElementById('login');
 
-btnLogin.addEventListener('click', function(){
-
-    if (Password === "" ) {
-        alert("Name must be filled out");
-    }
-    else if (Username === "" ) {
-        alert("Name must be filled out");
-    }
-    else if( Password.lenght<=5){
-        alert("There are not enough characters");
-            }
-            else if( Username.lenght<=5){
-                alert("There are not enough characters");
-            }
-                    location.replace('/pages/home/home.html');
-                
-                    
-})
-   
+function goHome() {
+  var Username = document.getElementById("Username").value;
+var Password = document.getElementById("Password").value;
+var btnLogin = document.getElementById("login");
+  if (Password === "" || Username === "") {
+    alert("Name must be filled out");
+  } else {
+    window.location.href= 'http://127.0.0.1:5500/pages/home/home.html';
+  }}
+ 
