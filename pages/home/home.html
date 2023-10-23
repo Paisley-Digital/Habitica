@@ -1,102 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./home.css">
     <title>Habitica</title>
 </head>
+
 <body>
-    <div class="home">
-       
-        <div id="navlist">
-            <a href="/pages/home/home.html">Home</a>
-            <a href="#">Group</a>
-            <a href="/pages/profile/profile.html">My profile</a>
-            <a href="/pages/aboutUs/About.html">Help</a>
-     
-          
-            <div class="search">
-                <form action="#">
-                    <input type="text"
-                           placeholder=" Search Courses"
-                           name="search">
-                    <button>
-                        <i class="fa fa-search"
-                           style="font-size: 18px;">
-                        </i>
-                    </button>
-                </form>
+    <div class="habitica">
+        <div class="home">
+            <!-- Navbar items -->
+            <div id="navlist">
+                <a href="#">Home</a>
+                <a href="#">Group</a>
+                <a href="#">My profile</a>
+                <a href="#">Help</a>
+
+                <!-- search bar right align -->
+                <div class="search">
+                    <form action="#">
+                        <input type="text" placeholder=" Search Courses" name="search">
+                        <button>
+                            <i class="fa fa-search" style="font-size: 18px;">
+                            </i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- logo with tag -->
+            <div class="content">
+                <h1 style="color:green; padding-top:40px;">
+                    GeeksforGeeks
+                </h1>
+
+                <b>
+                    A Computer Science
+                    Portal for Geeks
+                </b>
+                <p>
+                </p>
             </div>
         </div>
-     
-        
-        <div class="content">
-           <br>
-           
-        </div>
-        </div>
+
         <div class="services">
             <section class="pricecol">
-            <div class="icon">
-            <i class="icon-magic"></i>
-            </div>
-            <h3><Span>habits</span></h3>
+                <h3><Span>habits</span></h3>
                 <div class="cartList">
-                    <p class="creatText">Add Notes</p>
+                    <button class="creatText"> Add Notes </button>
                 </div>
             </section>
+
             <section class="pricecol">
-            <div class="icon">
-            <i class="icon-leaf"></i>
-            </div>
-            <h3><Span>work schedule</span></h3>
-                <div class="cartList">
-                    <p class="creatText">Add Notes</p>
-                </div>   
+                <h3><Span>Agenda</span></h3>
+                <div class="cartList-2">
+                    <button class="creatText"> Add Notes </button>
+                </div>
             </section>
-            
+
             <section class="pricecol">
-            <div class="icon">
-            <i class="icon-link"></i>
-            </div>
-            <h3><Span>Curriculum</span></h3>
-                <div class="cartList">
+                <h3><Span>Curriculum</span></h3>
+                <div class="cartList-3">
                     <button class="creatText">Add Notes</button>
                 </div>
-
             </section>
+        </div>
+
+        <!-- footer -->
+        <div id="footer">
+            <footer class="footer">
+                <div class="waves">
+                    <div class="wave" id="wave1"></div>
+                    <div class="wave" id="wave2"></div>
+                    <div class="wave" id="wave3"></div>
+                    <div class="wave" id="wave4"></div>
+                </div>
+
+                <ul class="social-icon">
+                    <li class="social-icon__item"><a class="social-icon__link" href="#">
+                            <img src="./skype.svg" width="30px" height="30px">
+                        </a></li>
+                    <li class="social-icon__item"><a class="social-icon__link" href="#">
+                            <img src="./github.svg" width="30px" height="30px">
+                        </a></li>
+                    <li class="social-icon__item"><a class="social-icon__link" href="#">
+                            <img src="./send.svg" width="30px" height="30px">
+                        </a></li>
+                    <li class="social-icon__item"><a class="social-icon__link" href="#">
+                            <img src="./instagram.svg" width="30px" height="30px">
+                        </a></li>
+                </ul>
+
+                <p>&copy;2021 Nadine Coelho | All Rights Reserved</p>
+            </footer>
+        </div>
+
+        <!-- creatCart -->
+        <div class="creatCart">
+            <div class="controlForm">
+                <img class="save" src="./save.svg">
+                <header class="edit">
+                    EditHabit
+                </header>
+                <div class="container">
+                    <p class="title">Title</p>
+                    <input class="editTitle" type="text" name="title" placeholder="Please enter the subject">
+                </div>
+                <p class="guidance">Please enter the desired text</p>
+                <div class=".Edit text">
+                    <textarea class="textarea" name="" id="" cols="30" rows="1"
+                        placeholder="Please enter the desired text"></textarea>
+                </div>
+                <img class="pluse" src="./plus.svg">
+                <img class="minus" src="./dash.svg">
+            </div>
+        </div>
+
+        <div class="creatCart-2">
+            <div class="controlForm-2">
+                <img class="save-2" src="./save.svg">
+                <header class="edit-2">
+                    Agenda
+                </header>
+                <div class="container-2">
+                    <p class="title">Saturday:</p>
+                    <input class="editTitle-2" type="text" name="Saturday" placeholder="Please enter the subject">
+                    <p class="title">Sunday:</p>
+                    <input class="editTitle-2" type="text" name="Sunday" placeholder="Please enter the subject">
+                    <p class="title">Monday:</p>
+                    <input class="editTitle-2" type="text" name="Monday" placeholder="Please enter the subject">
+                    <p class="title">Tuesday:</p>
+                    <input class="editTitle-2" type="text" name="Tuesday" placeholder="Please enter the subject">
+                    <p class="title">Wednesday:</p>
+                    <input class="editTitle-2" type="text" name="Wednesday" placeholder="Please enter the subject">
+                    <p class="title">Thursday:</p>
+                    <input class="editTitle-2" type="text" name="Thursday" placeholder="Please enter the subject">
+                    <p class="title">Friday:</p>
+                    <input class="editTitle-2" type="text" name="Friday" placeholder="Please enter the subject">
+                </div>
+                <p class="guidance-2">Please enter the desired text</p>
+
+                <div class=".Edit text-2">
+                    <textarea class="textarea-2" name="" id="" cols="30" rows="1"
+                        placeholder="Please enter the desired text"></textarea>
+                </div>
+                <img class="pluse-2" src="./plus.svg">
+                <img class="minus-2" src="./dash.svg">
+            </div>
+        </div>
+
+        <div class="creatCart-3">
+            <div class="controlForm-3">
+                <img class="save-3" src="./save.svg">
+                <header class="edit-3">
+                </header>
+                <div class="container-3">
+                    <p class="title">Saturday:</p>
+                    <input class="editTitle-2" type="text" name="Saturday" placeholder="Please enter the subject">
+                    <p class="title">Sunday:</p>
+                    <input class="editTitle-2" type="text" name="Sunday" placeholder="Please enter the subject">
+                    <p class="title">Monday:</p>
+                    <input class="editTitle-2" type="text" name="Monday" placeholder="Please enter the subject">
+                    <p class="title">Tuesday:</p>
+                    <input class="editTitle-2" type="text" name="Tuesday" placeholder="Please enter the subject">
+                    <p class="title">Wednesday:</p>
+                    <input class="editTitle-2" type="text" name="Wednesday" placeholder="Please enter the subject">
+                    <p class="title">Thursday:</p>
+                    <input class="editTitle-2" type="text" name="Thursday" placeholder="Please enter the subject">
+                    <p class="title">Friday:</p>
+                    <input class="editTitle-2" type="text" name="Friday" placeholder="Please enter the subject">
+                </div>
+                <p class="guidance-3">Please enter the desired text</p>
+                <div class=".Edit text-3">
+                    <textarea class="textarea-3" name="" id="" cols="30" rows="1"
+                        placeholder="Please enter the desired text"></textarea>
+
+                </div>
+                <img class="pluse-3" src="./plus.svg">
+                <img class="minus-3" src="./dash.svg">
+
+
+                </template>
             </div>
 
-
-            <div id="editHabit">
-                <div class="controlForm">
-                    <header class="edit">
-                        EditHabit
-                    </header>
-                    <div class="container">
-                        <p class="title">title:</p>
-                        <input class="editTitle" type="text" name="title" placeholder="Please enter the subject">
-                    </div>
-                    <p class="guidance">Please enter the desired text</p>
-                    <div class=".Edit text">
-                        <textarea class="textarea" name="" id="" cols="30" rows="1" placeholder="Please enter the desired text"></textarea>
-                    </div>
-                   
-                   <div class="icon">
-                  <svg  xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="minus" viewBox="0 0 16 16">
-                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="pluse" viewBox="0 0 16 16">
-                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-                  </svg>
-                </div>
-                </div>
-            </template>
-            
+            <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+            <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
             <script src="./home.js"></script>
 
-    </body>
+</body>
+
 </html>
