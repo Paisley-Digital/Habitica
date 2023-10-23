@@ -9,7 +9,7 @@
     <div class="container">
       <h2>LOGIN FORM</h2>
       <div class="form-container">
-        <form>
+        <form id="loginForm">
           <div class="inputContainer">
             <label><b>Username</b></label>
             <input
@@ -17,7 +17,6 @@
               type="text"
               class="loginInput"
               placeholder="Enter Username"
-              required
             />
           </div>
 
@@ -28,11 +27,10 @@
               class="loginInput"
               type="password"
               placeholder="Enter Password"
-              required
             />
           </div>
           <div>
-            <button id="login">Login</button>
+            <button id="login" onclick="goHome()" >Login</button>
           </div>
         </form>
       </div>
