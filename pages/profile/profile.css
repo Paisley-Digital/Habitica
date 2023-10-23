@@ -6,6 +6,7 @@ body {
     rgba(127, 244, 118, 0.499124649859944) 100%,
     rgba(138, 246, 152, 0.11537114845938379) 100%
   );
+  font-family:Abel;
 }
 
 .form-control:focus {
@@ -47,4 +48,25 @@ body {
   color: #fff;
   cursor: pointer;
   border: solid 1px rgb(62, 249, 84);
+}
+#selectedImage{
+  display: flex;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+    align-items: center;
+    align-content: center;
+    border-radius: 50%;
+   
+}
+input[type="file"] {
+  background: rgb(157, 158, 157);
+  color: #fff;
+  border: 1px solid #ccc;
+  padding: 7px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#photoInput:hover{
+  background: rgb(62, 249, 84);
 }

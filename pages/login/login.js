@@ -1,11 +1,16 @@
-let Username = document.getElementById("Username").value;
-let Password = document.getElementById("Password").value;
-let btnLogin = document.getElementById("login");
 
 function goHome() {
-  if (Password == "" || Username == "") {
+  var Username = document.getElementById("Username").value;
+var Password = document.getElementById("Password").value;
+var btnLogin = document.getElementById("login");
+  if (Password === "" || Username === "") {
     alert("Name must be filled out");
   } else {
-    location.replace("/pages/home/home.html");
-  }
-}
+    window.location.href= 'http://127.0.0.1:5500/pages/home/home.html';
+  }}
+ 
+
+
+
+
+
