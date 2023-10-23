@@ -12,34 +12,69 @@ let creatCart2 = document.querySelector(".creatCart-2");
 let creatCart3 = document.querySelector(".creatCart-3");
 let save2 = document.querySelector(".save-2");
 let save3 = document.querySelector(".save-3");
+let footer=document.getElementById("footer");
 
 cartList.addEventListener("click", function () {
   creatCart.style.display = "block";
   services.style.display = "none";
+  footer.style.display="none";
 });
 
 save.addEventListener("click", function () {
   creatCart.style.display = "none";
   services.style.display = "block";
+  footer.style.display="block";
 });
 
 cartList2.addEventListener("click", function () {
   services.style.display = "none";
   creatCart2.style.display = "block";
   creatCart3.style.display="none";
+  footer.style.display="none";
 });
 
 save2.addEventListener("click", function () {
   creatCart2.style.display="none";
   services.style.display = "block";
+  footer.style.display="block";
 });
 
 cartList3.addEventListener("click", function () {
   services.style.display="none";
   creatCart3.style.display="block";
+  footer.style.display="none";
 });
 
 save3.addEventListener("click", function () {
   creatCart3.style.display = "none";
   services.style.display = "block";
+  footer.style.display="block";
 });
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
