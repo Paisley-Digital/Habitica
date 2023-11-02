@@ -1,0 +1,72 @@
+body {
+  background: rgb(32, 135, 1);
+  background: radial-gradient(
+    circle,
+    rgba(59, 126, 1, 0.695) 40%,
+    rgba(127, 244, 118, 0.499124649859944) 100%,
+    rgba(138, 246, 152, 0.11537114845938379) 100%
+  );
+  font-family:Abel;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: rgb(62, 249, 84);
+}
+
+.profile-button {
+  background: rgb(157, 158, 157);
+  box-shadow: none;
+  border: none;
+}
+
+.profile-button:hover {
+  background: rgb(62, 249, 84);
+}
+
+.profile-button:focus {
+  background: rgb(62, 249, 84);
+  box-shadow: none;
+}
+
+.profile-button:active {
+  background: rgb(62, 249, 84);
+  box-shadow: none;
+}
+
+.back:hover {
+  color: rgb(62, 249, 84);
+  cursor: pointer;
+}
+
+.labels {
+  font-size: 11px;
+}
+
+.add-experience:hover {
+  background: rgb(62, 249, 84);
+  color: #fff;
+  cursor: pointer;
+  border: solid 1px rgb(62, 249, 84);
+}
+#selectedImage{
+  display: flex;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+    align-items: center;
+    align-content: center;
+    border-radius: 50%;
+   
+}
+input[type="file"] {
+  background: rgb(157, 158, 157);
+  color: #fff;
+  border: 1px solid #ccc;
+  padding: 7px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#photoInput:hover{
+  background: rgb(62, 249, 84);
+}
