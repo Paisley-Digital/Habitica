@@ -13,181 +13,149 @@
         <div class="home">
             <!-- Navbar items -->
             <div id="navlist">
-                <a href="#">Home</a>
-                <a href="#">Group</a>
-                <a href="#">My profile</a>
-                <a href="#">Help</a>
+                <a href="../home/home.html">Home</a>
+                <a href="../profile/profile.html">My profile</a>
+                <a href="../aboutUs/About.html">about</a>
 
                 <!-- search bar right align -->
                 <div class="search">
                     <form action="#">
                         <input type="text" placeholder=" Search Courses" name="search">
                         <button>
-                            <i class="fa fa-search" style="font-size: 18px;">
+                            <i class="fa fa-search">
+                                <img src="../../image/search.svg">
                             </i>
                         </button>
                     </form>
                 </div>
             </div>
 
-            <!-- logo with tag -->
-            <div class="content">
-                <h1 style="color:green; padding-top:40px;">
-                    GeeksforGeeks
-                </h1>
-
-                <b>
-                    A Computer Science
-                    Portal for Geeks
-                </b>
-                <p>
-                </p>
+            <div class="head">
+                <div class="boxHead">
+                    <p class="texHead">Penguin planning</p>
+                    <img src="../../image/pango.png.png" class="iconHead" width="100px" height="100px">
+                </div>
             </div>
-        </div>
+            <div class="services">
+                <section class="pricecol">
+                    <h3><Span>habits</span></h3>
+                    <div id="input1"></div>
+                    <img class="pluse" src="./plus.svg" onclick="createInput()">
+                    <img class="minus" src="./dash.svg" onclick="remove()">
+                    <div>
+                        <p class="addnote"></p>
+                    </div>
+                    <div class="cartList">
+                    </div>
+                </section>
 
-        <div class="services">
-            <section class="pricecol">
-                <h3><Span>habits</span></h3>
-                <div class="cartList">
-                    <button class="creatText"> Add Notes </button>
-                </div>
-            </section>
+                <section class="pricecol">
+                    <h3><Span>Agenda</span></h3>
+                    <div id="input2"></div>
+                    <div class="cartList-2">
+                        <img class="pluse-2" src="./plus.svg" onclick="creatAgenda()">
+                        <img class="minus-2" src="./dash.svg" onclick="remove2()">
+                    </div>
+                </section>
 
-            <section class="pricecol">
-                <h3><Span>Agenda</span></h3>
-                <div class="cartList-2">
-                    <button class="creatText"> Add Notes </button>
-                </div>
-            </section>
+                <section class="pricecol">
+                    <h3><Span>Curriculum</span></h3>
+                    <div id="input3"></div>
+                    <div class="cartList-3">
+                        <img class="pluse-3" src="./plus.svg" onclick="Curriculum()">
+                        <img class="minus-3" src="./dash.svg" onclick="remove3()">
 
-            <section class="pricecol">
-                <h3><Span>Curriculum</span></h3>
-                <div class="cartList-3">
-                    <button class="creatText">Add Notes</button>
-                </div>
-            </section>
-        </div>
-
-        <!-- footer -->
-        <div id="footer">
-            <footer class="footer">
-                <div class="waves">
-                    <div class="wave" id="wave1"></div>
-                    <div class="wave" id="wave2"></div>
-                    <div class="wave" id="wave3"></div>
-                    <div class="wave" id="wave4"></div>
-                </div>
-
-                <ul class="social-icon">
-                    <li class="social-icon__item"><a class="social-icon__link" href="#">
-                            <img src="./skype.svg" width="30px" height="30px">
-                        </a></li>
-                    <li class="social-icon__item"><a class="social-icon__link" href="#">
-                            <img src="./github.svg" width="30px" height="30px">
-                        </a></li>
-                    <li class="social-icon__item"><a class="social-icon__link" href="#">
-                            <img src="./send.svg" width="30px" height="30px">
-                        </a></li>
-                    <li class="social-icon__item"><a class="social-icon__link" href="#">
-                            <img src="./instagram.svg" width="30px" height="30px">
-                        </a></li>
-                </ul>
-
-                <p>&copy;2021 Nadine Coelho | All Rights Reserved</p>
-            </footer>
-        </div>
-
-        <!-- creatCart -->
-        <div class="creatCart">
-            <div class="controlForm">
-                <img class="save" src="./save.svg">
-                <header class="edit">
-                    EditHabit
-                </header>
-                <div class="container">
-                    <p class="title">Title</p>
-                    <input class="editTitle" type="text" name="title" placeholder="Please enter the subject">
-                </div>
-                <p class="guidance">Please enter the desired text</p>
-                <div class=".Edit text">
-                    <textarea class="textarea" name="" id="" cols="30" rows="1"
-                        placeholder="Please enter the desired text"></textarea>
-                </div>
-                <img class="pluse" src="./plus.svg">
-                <img class="minus" src="./dash.svg">
-            </div>
-        </div>
-
-        <div class="creatCart-2">
-            <div class="controlForm-2">
-                <img class="save-2" src="./save.svg">
-                <header class="edit-2">
-                    Agenda
-                </header>
-                <div class="container-2">
-                    <p class="title">Saturday:</p>
-                    <input class="editTitle-2" type="text" name="Saturday" placeholder="Please enter the subject">
-                    <p class="title">Sunday:</p>
-                    <input class="editTitle-2" type="text" name="Sunday" placeholder="Please enter the subject">
-                    <p class="title">Monday:</p>
-                    <input class="editTitle-2" type="text" name="Monday" placeholder="Please enter the subject">
-                    <p class="title">Tuesday:</p>
-                    <input class="editTitle-2" type="text" name="Tuesday" placeholder="Please enter the subject">
-                    <p class="title">Wednesday:</p>
-                    <input class="editTitle-2" type="text" name="Wednesday" placeholder="Please enter the subject">
-                    <p class="title">Thursday:</p>
-                    <input class="editTitle-2" type="text" name="Thursday" placeholder="Please enter the subject">
-                    <p class="title">Friday:</p>
-                    <input class="editTitle-2" type="text" name="Friday" placeholder="Please enter the subject">
-                </div>
-                <p class="guidance-2">Please enter the desired text</p>
-
-                <div class=".Edit text-2">
-                    <textarea class="textarea-2" name="" id="" cols="30" rows="1"
-                        placeholder="Please enter the desired text"></textarea>
-                </div>
-                <img class="pluse-2" src="./plus.svg">
-                <img class="minus-2" src="./dash.svg">
-            </div>
-        </div>
-
-        <div class="creatCart-3">
-            <div class="controlForm-3">
-                <img class="save-3" src="./save.svg">
-                <header class="edit-3">
-                </header>
-                <div class="container-3">
-                    <p class="title">Saturday:</p>
-                    <input class="editTitle-2" type="text" name="Saturday" placeholder="Please enter the subject">
-                    <p class="title">Sunday:</p>
-                    <input class="editTitle-2" type="text" name="Sunday" placeholder="Please enter the subject">
-                    <p class="title">Monday:</p>
-                    <input class="editTitle-2" type="text" name="Monday" placeholder="Please enter the subject">
-                    <p class="title">Tuesday:</p>
-                    <input class="editTitle-2" type="text" name="Tuesday" placeholder="Please enter the subject">
-                    <p class="title">Wednesday:</p>
-                    <input class="editTitle-2" type="text" name="Wednesday" placeholder="Please enter the subject">
-                    <p class="title">Thursday:</p>
-                    <input class="editTitle-2" type="text" name="Thursday" placeholder="Please enter the subject">
-                    <p class="title">Friday:</p>
-                    <input class="editTitle-2" type="text" name="Friday" placeholder="Please enter the subject">
-                </div>
-                <p class="guidance-3">Please enter the desired text</p>
-                <div class=".Edit text-3">
-                    <textarea class="textarea-3" name="" id="" cols="30" rows="1"
-                        placeholder="Please enter the desired text"></textarea>
-
-                </div>
-                <img class="pluse-3" src="./plus.svg">
-                <img class="minus-3" src="./dash.svg">
-
-
-                </template>
+                    </div>
+                </section>
             </div>
 
-            <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-            <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-            <script src="./home.js"></script>
+            <!-- footer -->
+            <div id="footer">
+                <footer class="footer">
+                    <div class="waves">
+                        <div class="wave" id="wave1"></div>
+                        <div class="wave" id="wave2"></div>
+                        <div class="wave" id="wave3"></div>
+                        <div class="wave" id="wave4"></div>
+                    </div>
+
+                    <ul class="social-icon">
+                        <li class="social-icon__item"><a class="social-icon__link" href="live:.cid.802e23f047296df9">
+                                <img src="./skype.svg" width="30px" height="30px">
+                            </a></li>
+                        <li class="social-icon__item"><a class="social-icon__link"
+                                href="https://github.com/hamidshariat">
+                                <img src="./github.svg" width="30px" height="30px">
+                            </a></li>
+                        <li class="social-icon__item"><a class="social-icon__link" href="https://t.me/+989333065599">
+                                <img src="./send.svg" width="30px" height="30px">
+                            </a></li>
+                        <li class="social-icon__item"><a class="social-icon__link"
+                                href="instagram.com/hamid-shariatmovahed">
+                                <img src="./instagram.svg" width="30px" height="30px">
+                            </a></li>
+                    </ul>
+                </footer>
+            </div>
+
+            <!-- creatCart -->
+            <div class="creatCart">
+                <div class="controlForm">
+                    <img class="save" src="./save.svg">
+                    <header class="edit">
+                        EditHabit
+                    </header>
+                    <div class="container">
+                        <p class="title">Title</p>
+                        <input class="editTitle" type="text" name="title" placeholder="Please enter the subject">
+                    </div>
+                    <p class="guidance">Please enter the desired text</p>
+                    <div class=".Edit text">
+                        <textarea class="textarea" name="" id="" cols="30" rows="1"
+                            placeholder="Please enter the desired text"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="creatCart-2">
+                <div class="controlForm-2">
+                    <img class="save-2" src="./save.svg">
+                    <header class="edit-2">
+                        Agenda
+                    </header>
+                    <div class="container-2">
+                        <input class="editTitle-2" type="text" name="title" placeholder="Please enter the subject">
+                    </div>
+                    <p class="guidance-2">Please enter the desired text</p>
+
+                    <div class=".Edit text-2">
+                        <textarea class="textarea-2" name="" id="" cols="30" rows="1"
+                            placeholder="Please enter the desired text"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="creatCart-3">
+                <div class="controlForm-3">
+                    <img class="save-3" src="./save.svg">
+                    <header class="edit-3">
+                    </header>
+                    <div class="container-3">
+                        <input class="editTitle-3" type="text" name="title" placeholder="Please enter the subject">
+                    </div>
+                    <p class="guidance-3">Please enter the desired text</p>
+                    <div class=".Edit text-3">
+                        <textarea class="textarea-3" name="" id="" cols="30" rows="1"
+                            placeholder="Please enter the desired text"></textarea>
+
+                    </div>
+
+
+                    </template>
+                </div>
+                <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+                <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+                <script src="./home.js"></script>
 
 </body>
 
