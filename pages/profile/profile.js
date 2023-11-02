@@ -1,27 +1,51 @@
-let name=document.getElementById('name');
-let lastName=document.getElementById('lastName');
-let mobileNumbre=document.getElementById('mobileNumbre');
-let email=document.getElementById('email');
-let password=document.getElementById('password');
-let Btn=document.querySelector('.btn');
-Btn.addEventListener('click', function(){
-name.value="";
-lastName.value="";
-mobileNumbre.value="";
-email.value="";
-password.value="";
-})
+let editProfile = document.getElementById("editProfile");
 
-document.getElementById("photoInput").addEventListener("change", function(event) {
-    const selectedFile = event.target.files[0];
+editProfile.addEventListener("click", function () {
+  const passwordInput = document.getElementById("password");
+  const emailInput = document.getElementById("email");
+  const nameInput = document.getElementById("name");
+  const lastNameInput = document.getElementById("lastName");
+  const mobileNumbreInput = document.getElementById("mobileNumbre");
 
-    if (selectedFile) {
-        const imageContainer = document.getElementById("imageContainer");
-        const selectedImage = document.getElementById("selectedImage");
-        const imageUrl = URL.createObjectURL(selectedFile);
-        selectedImage.src = imageUrl;
-        selectedImage.style.display = "block"; 
+  const emailValue = emailInput.value;
 
-    
-    }
+  if (
+    passwordInput.value === "" ||
+    emailInput.Value === "" ||
+    nameInput.value === "" ||
+    lastNameInput.value === "" ||
+    mobileNumbreInput.value === ""
+  ) {
+    alert("Enter your complete information");
+  } else if (!isValidEmail(emailValue)) {
+    alert("Please enter a valid email");
+  } else {
+    passwordInput.value = "";
+    emailInput.value = "";
+    nameInput.value = "";
+    lastNameInput.value = "";
+    mobileNumbreInput.value = "";
+  }
 });
+
+document.getElementById("photoInput").addEventListener("change", function (event) {
+    const selectedFile = event.target.files[0];
+    if (!isValidImage(selectedFile)) {
+      alert("Selected file is not an image.");
+    } else {
+      const imageContainer = document.getElementById("imageContainer");
+      const selectedImage = document.getElementById("selectedImage");
+      const imageUrl = URL.createObjectURL(selectedFile);
+      selectedImage.src = imageUrl;
+      selectedImage.style.display = "block";
+    }
+  });
+
+function isValidImage(file) {
+  return file.type.startsWith("image/");
+}
+
+function isValidEmail(email) {
+  const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+  return emailPattern.test(email);
+}
