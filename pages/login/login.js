@@ -1,11 +1,13 @@
+let login = document.getElementById('login');
 
-function goHome() {
+login.addEventListener('click', function () {
   var Username = document.getElementById("Username").value;
-var Password = document.getElementById("Password").value;
-var btnLogin = document.getElementById("login");
-  if (Password === "" || Username === "") {
-    alert("Name must be filled out");
-  } else {
-    window.location.href= 'http://127.0.0.1:5500/pages/home/home.html';
-  }}
- 
+  var Password = document.getElementById("Password").value;
+
+  if (Password === "" || Username === "") 
+    alert("Both username and password must be filled out");
+   else {
+    window.location.replace('/pages/home/home.html');
+   }
+
+});
