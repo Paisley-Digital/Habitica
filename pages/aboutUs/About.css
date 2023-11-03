@@ -13,6 +13,7 @@
     rgba(138, 246, 152, 0.11537114845938379) 100%
   );
 }
+
 .background-image {
   border-radius: 10px;
   background-color: #ffffff;
@@ -21,6 +22,7 @@
   margin-left: 100px;
   margin-top: 100px;
 }
+
 .image-AboutUs {
   width: 200px;
   height: 200px;
@@ -28,14 +30,14 @@
   background-image: url(../../image/habit.jfif);
   background-size: contain;
   background-repeat: no-repeat;
-
   margin-left: 600px;
-  margin-left: 550px;
 }
+
 .caption-for-AboutUs {
   text-align: center;
   margin-top: -70px;
 }
+
 .origin {
   margin-left: 300px;
   font-size: 20px;
@@ -44,4 +46,59 @@
 
 .title {
   font-size: 30px;
+}
+
+@media (max-width: 768px) {
+  .border-green {
+    width: 100%;
+    height: auto;
+    margin: 10px;
+    border: 5px solid white;
+  }
+
+  .background-image {
+    width: 100%;
+    height: auto;
+    margin: 20px auto;
+  }
+
+  .image-AboutUs {
+    width: 150px;
+    height: 150px;
+    margin-left: auto; /* Center the image horizontally */
+  }
+}
+
+@media (max-width: 600px) {
+  .border-green {
+    width: 100%;
+    border: 3px solid white;
+  }
+
+  .background-image {
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  .image-AboutUs {
+    width: 100px;
+    height: 100px;
+  }
+
+  .origin {
+    margin-left: 10px;
+    font-size: 16px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
 }

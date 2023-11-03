@@ -2,39 +2,41 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./login.css" />
     <title>Document</title>
   <body>
     <div class="container">
-      <h2>LOGIN FORM</h2>
+      <h2 class="text-center">LOGIN FORM</h2>
       <div class="form-container">
         <form id="loginForm">
-          <div class="inputContainer">
-            <label><b>Username</b></label>
+          <div class="form-group">
+            <label for="Username"><b>Username</b></label>
             <input
               id="Username"
               type="text"
-              class="loginInput"
+              class="form-control"
               placeholder="Enter Username"
             />
           </div>
-
-          <div class="inputContainer">
-            <label><b>Password</b></label>
+    
+          <div class="form-group">
+            <label for="Password"><b>Password</b></label>
             <input
               id="Password"
-              class="loginInput"
+              class="form-control"
               type="password"
               placeholder="Enter Password"
             />
           </div>
-          <div>
-            <button id="login" onclick="goHome()" >Login</button>
+          <div class="text-center">
+            <button id="login" class="btn btn-primary">Login</button>
           </div>
         </form>
       </div>
     </div>
-    <script src="./login.js"></script>
+      <script src="./login.js"></script>
   </body>
 </html>
