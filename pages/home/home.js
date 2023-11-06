@@ -23,6 +23,8 @@ pluse.addEventListener("click", function () {
   creatCart.style.display = "block";
   services.style.display = "none";
   footer.style.display = "none";
+  let valueclear = document.querySelector(".editTitle")
+  valueclear.value = " " ;
 });
 
 save.addEventListener("click", function () {
@@ -31,15 +33,28 @@ save.addEventListener("click", function () {
   footer.style.display = "block";
 
   let inputValue = document.querySelector(".editTitle").value;
-  let textarea = document.querySelector(".textarea").value;
-  let textareaValue = formatText(textarea);
   let formattedText = formatText(inputValue);
-
+  
   let inputs = document.createElement("div");
   inputs.setAttribute("class", "form-control");
-  (inputs.textContent = formattedText), textareaValue;
+  (inputs.textContent = formattedText);
   document.querySelector("#input1").appendChild(inputs);
+  saveValue(inputs.textContent)
 });
+
+function saveValue (task){
+  console.log(task)
+  let tasks;
+  if (localStorage.getItem('tasks') === null) {
+    tasks = [];
+  } else {
+    tasks = JSON.parse(localStorage.getItem('tasks'));
+  }
+
+  tasks.push(task);
+
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+}
 
 function formatText(text) {
   const maxLineLength = 10;
@@ -77,6 +92,8 @@ pluse2.addEventListener("click", function () {
   creatCart2.style.display = "block";
   creatCart3.style.display = "none";
   footer.style.display = "none";
+  let valueclear2 = document.querySelector(".editTitle-2");
+  valueclear2.value = " " ;
 });
 
 save2.addEventListener("click", function () {
@@ -108,6 +125,8 @@ pluse3.addEventListener("click", function () {
   services.style.display = "none";
   creatCart3.style.display = "block";
   footer.style.display = "none";
+  let valueclear3 = document.querySelector(".editTitle-3") ;
+  valueclear3.value = " " ;
 });
 
 save3.addEventListener("click", function () {

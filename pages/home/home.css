@@ -1,8 +1,25 @@
+ @media screen and (max-width: 600px) {
+  .pricecol {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+    float: inherit ;
+    width : 100%
+  }
+}
+  
 body {
-  background-color: darkkhaki;
+  background-color: darkslategray;
 }
 #navlist {
-  background: rgb(32, 135, 1);
+  background: darkblue;
   position: absolute;
   width: 100%;
 }
@@ -39,7 +56,7 @@ body {
 }
 
 .search button {
-  background-color: rgb(32, 135, 1);
+  background-color: darkblue;
   float: right;
   padding: 5px 10px;
   margin-right: 16px;
@@ -49,7 +66,7 @@ body {
 }
 .boxHead {
   padding-top: 60px;
-  background: darkgreen;
+  background: linear-gradient(45deg, black, transparent);
   margin-top: 19px;
   width: 100%;
   margin-bottom: 50px;
@@ -76,7 +93,7 @@ body {
 
 .pricecol {
   width: 31%;
-  background: rgba(41, 167, 2, 0.64);
+  background: cornflowerblue;
   min-height: 30%;
   border-radius: 10px;
   position: relative;
@@ -85,7 +102,7 @@ body {
   font-family: verdana;
   float: left;
   margin-left: 20px;
-}
+  }
 
 .icon {
   width: 60px;
@@ -118,6 +135,7 @@ h3 span {
   font-family: verdana;
   font-size: 20px;
   min-width: none;
+background :darkblue;
 }
 
 .button {
@@ -166,7 +184,7 @@ li {
 
 .controlForm {
   width: 300px;
-  background: rgba(41, 167, 2, 0.64);
+  background: linear-gradient(45deg, black, transparent);
   border-radius: 10px;
   position: relative;
   padding: 30px 0px;
@@ -281,7 +299,7 @@ li {
 .pluse {
   color: brown;
   width: 30px;
-  /* padding-top: 20px; */
+  padding-top: 20px; 
   cursor: pointer;
 }
 
@@ -303,13 +321,13 @@ li {
   cursor: pointer;
 }
 
-/* styleCart-2 */
+ /* styleCart-2  */
 .creatCart-2 {
   text-align: -webkit-center;
 }
 
 .controlForm-2 {
-  background: rgba(41, 167, 2, 0.64);
+  background: linear-gradient(45deg, black, transparent);
   border-radius: 10px;
   position: relative;
   padding: 30px 0px;
@@ -400,9 +418,9 @@ li {
   cursor: pointer;
 }
 
-/* styleCart-3 */
+ /* styleCart-3  */
 .controlForm-3 {
-  background: rgba(41, 167, 2, 0.64);
+  background:linear-gradient(45deg, black, transparent);
   border-radius: 10px;
   position: relative;
   padding: 30px 0px;
@@ -528,7 +546,7 @@ li {
   z-index: 0;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
 
 .footer {
   position: relative;
@@ -548,7 +566,7 @@ li {
   align-items: center;
   margin: 10px 0;
   flex-wrap: wrap;
-  background-color: lightgreen;
+  background-color: darkblue;
 }
 
 .social-icon__item,
