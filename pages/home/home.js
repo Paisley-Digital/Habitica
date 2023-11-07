@@ -37,7 +37,7 @@ save.addEventListener("click", function () {
   
   let inputs = document.createElement("div");
   inputs.setAttribute("class", "form-control");
-  (inputs.textContent = formattedText);
+  inputs.textContent = formattedText;
   document.querySelector("#input1").appendChild(inputs);
   saveValue(inputs.textContent)
 });
