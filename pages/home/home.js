@@ -1,5 +1,5 @@
 let pluse = document.querySelector(".pluse");
-let minus = document.querySelector(".minus");
+// let minus = document.querySelector(".minus");
 let pluse2 = document.querySelector(".pluse-2");
 let creatText = document.querySelectorAll(".creatText");
 let creatCart = document.querySelector(".creatCart");
@@ -19,12 +19,15 @@ let addnote = document.querySelector(".addnote");
 let pluse3 = document.querySelector(".pluse-3");
 let editTitle = document.querySelectorAll(".editTitle");
 
+showTasks();
+showvaluesMiddleCard();
+ShowLastCard();
 pluse.addEventListener("click", function () {
   creatCart.style.display = "block";
   services.style.display = "none";
   footer.style.display = "none";
-  let valueclear = document.querySelector(".editTitle")
-  valueclear.value = " " ;
+  let valueclear = document.querySelector(".editTitle");
+  valueclear.value = " ";
 });
 
 save.addEventListener("click", function () {
@@ -34,26 +37,47 @@ save.addEventListener("click", function () {
 
   let inputValue = document.querySelector(".editTitle").value;
   let formattedText = formatText(inputValue);
-  
-  let inputs = document.createElement("div");
-  inputs.setAttribute("class", "form-control");
-  inputs.textContent = formattedText;
-  document.querySelector("#input1").appendChild(inputs);
-  saveValue(inputs.textContent)
+  saveValue(formattedText);
+  showTasks();
 });
 
-function saveValue (task){
-  console.log(task)
-  let tasks;
-  if (localStorage.getItem('tasks') === null) {
-    tasks = [];
-  } else {
-    tasks = JSON.parse(localStorage.getItem('tasks'));
+function showTasks() {
+  let tasks = getValue("tasks");
+  let inputContainer = document.querySelector("#input1");
+  inputContainer.innerHTML = "";
+
+  for (let i = 0; i < tasks.length; i++) {
+    let taskDiv = document.createElement("div");
+    taskDiv.setAttribute("class", "form-control");
+    taskDiv.textContent = tasks[i];
+    saveTasks(tasks);
+    inputContainer.appendChild(taskDiv);
+
+    let deleteButton = document.createElement("button");
+    deleteButton.setAttribute("class", "deleteButton");
+    deleteButton.textContent = "Delete";
+    taskDiv.appendChild(deleteButton);
+    deleteButton.addEventListener("click", function () {
+      localStorage.removeItem("tasks");
+      taskDiv.remove();
+    });
   }
+}
 
+function getValue(item) {
+  const values = JSON.parse(localStorage.getItem(item));
+  return values || [];
+}
+
+function saveTasks(tasks) {
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+function saveValue(task) {
+  console.log(task);
+  let tasks = getValue("tasks");
   tasks.push(task);
-
-  localStorage.setItem('tasks', JSON.stringify(tasks));
+  saveTasks(tasks);
 }
 
 function formatText(text) {
@@ -77,23 +101,14 @@ function formatText(text) {
   return formattedText;
 }
 
-let inputedite = document.querySelector("#input1");
-inputedite.addEventListener("click", function () {
-  let inputValue = document.querySelector(".editTitle").value;
-  let formattedText = inputValue.remove;
-  inputedite.textContent = formattedText;
-  creatCart.style.display = "block";
-  services.style.display = "none";
-  footer.style.display = "none";
-});
+let notes = getValue("notes");
 
 pluse2.addEventListener("click", function () {
-  services.style.display = "none";
   creatCart2.style.display = "block";
-  creatCart3.style.display = "none";
+  services.style.display = "none";
   footer.style.display = "none";
   let valueclear2 = document.querySelector(".editTitle-2");
-  valueclear2.value = " " ;
+  valueclear2.value = " ";
 });
 
 save2.addEventListener("click", function () {
@@ -103,62 +118,102 @@ save2.addEventListener("click", function () {
 
   var inputValue2 = document.querySelector(".editTitle-2").value;
   var formattedText2 = formatText(inputValue2);
-  let input2 = document.createElement("div");
-
-  input2.setAttribute("class", "form-control2");
-  input2.textContent = formattedText2;
-  document.querySelector("#input2").appendChild(input2);
+  saveValue2(formattedText2);
+  showvaluesMiddleCard();
 });
 
-let inputedite2 = document.querySelector("#input2");
-inputedite2.addEventListener("click", function () {
-  let inputValue2 = document.querySelector(".editTitle-2").value;
-  let formattedText2 = inputValue2.remove;
-  inputedite2.textContent = formattedText2;
-  services.style.display = "none";
-  creatCart2.style.display = "block";
-  creatCart3.style.display = "none";
-  footer.style.display = "none";
-});
+function showvaluesMiddleCard() {
+  let notes = getValue("notes");
+  let inputContainer2 = document.querySelector("#input2");
+  inputContainer2.innerHTML = "";
+
+  for (let a = 0; a < notes.length; a++) {
+    let taskDiv2 = document.createElement("div");
+    taskDiv2.setAttribute("class", "form-control2");
+    taskDiv2.textContent = notes[a];
+    inputContainer2.appendChild(taskDiv2);
+    let deleteMiddleButton = document.createElement("button");
+    deleteMiddleButton.textContent = "Delete";
+    deleteMiddleButton.setAttribute("class", "deleteMiddleButton");
+    taskDiv2.appendChild(deleteMiddleButton);
+    deleteMiddleButton.addEventListener("click", function () {
+      localStorage.removeItem("notes");
+      taskDiv2.remove();
+    });
+  }
+}
+
+function getContentMiddleCard(item) {
+  const valuesMiddleCard = getValue("notes");
+  return valuesMiddleCard || [];
+}
+
+function saveTasks2(notes) {
+  localStorage.setItem("notes", JSON.stringify(notes));
+}
+
+function saveValue2(note) {
+  console.log(note);
+  notes.push(note);
+  saveTasks2(notes);
+}
+let written = getValue("written");
 
 pluse3.addEventListener("click", function () {
-  services.style.display = "none";
   creatCart3.style.display = "block";
+  services.style.display = "none";
   footer.style.display = "none";
-  let valueclear3 = document.querySelector(".editTitle-3") ;
-  valueclear3.value = " " ;
+  let valueclear3 = document.querySelector(".editTitle-3");
+  valueclear3.value = " ";
 });
 
 save3.addEventListener("click", function () {
   creatCart3.style.display = "none";
   services.style.display = "block";
   footer.style.display = "block";
+
   var inputValue3 = document.querySelector(".editTitle-3").value;
   var formattedText3 = formatText(inputValue3);
-  let input3 = document.createElement("div");
-  input3.setAttribute("class", "form-control3");
-  input3.textContent = formattedText3;
-  document.querySelector("#input3").appendChild(input3);
+
+  saveValue3(formattedText3);
+  ShowLastCard();
 });
 
-let inputedite3 = document.querySelector("#input3");
-inputedite3.addEventListener("click", function () {
-  let inputValue3 = document.querySelector(".editTitle-3").value;
-  let formattedText3 = inputValue3.remove;
-  inputedite3.textContent = formattedText3;
-  services.style.display = "none";
-  creatCart3.style.display = "block";
-  footer.style.display = "none";
-});
+function ShowLastCard() {
+  let written = getValue("written");
+  let inputContainer3 = document.querySelector("#input3");
+  inputContainer3.innerHTML = " ";
 
-function remove() {
-  document.querySelector(".form-control").remove();
+  for (let b = 0; b < written.length; b++) {
+    let taskDiv3 = document.createElement("div");
+    taskDiv3.setAttribute("class", "form-control3");
+    taskDiv3.textContent = written[b];
+    inputContainer3.appendChild(taskDiv3);
+    let deleteLastButton = document.createElement("button");
+    deleteLastButton.textContent = " Delete";
+    deleteLastButton.setAttribute("class", "deleteLastButton");
+    taskDiv3.appendChild(deleteLastButton);
+    deleteLastButton.addEventListener("click", function () {
+      localStorage.removeItem("written");
+      taskDiv3.remove();
+    });
+  }
 }
 
-function remove2() {
-  document.querySelector(".form-control2").remove();
+function saveTasks3(written) {
+  localStorage.setItem("written", JSON.stringify(written));
 }
 
-function remove3() {
-  document.querySelector(".form-control3").remove();
+function saveValue3(Wrote) {
+  console.log(Wrote);
+  written.push(Wrote);
+  saveTasks3(written);
 }
+
+// let inputedite3 = document.querySelector("#input3");
+// inputedite3.addEventListener("click", function () {
+//   services.style.display = "none";
+//   creatCart3.style.display = "block";
+//   footer.style.display = "none";
+// });
+
