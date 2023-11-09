@@ -283,7 +283,7 @@ li {
   cursor: pointer;
 } */
 
-.pluse , .pluse-2 , .pluse-3 {
+.pluse {
   color: brown;
   padding-top: 20px; 
   cursor: pointer;
@@ -366,6 +366,13 @@ li {
   cursor: pointer;
 } */
 
+.pluse-2 {
+  color: brown;
+  padding-top: 35px;
+  cursor: pointer;
+  margin-top: 70px;
+  width: 41px;
+}
 
 #editHabit-2 {
   margin-left: 400px;
@@ -436,7 +443,13 @@ li {
   cursor: pointer;
 } */
 
-
+.pluse-3 {
+  color: brown;
+  padding-top: 35px;
+  cursor: pointer;
+  margin-top: 70px;
+  width: 41px;
+}
 
 #editHabit-3 {
   margin-left: 400px;
