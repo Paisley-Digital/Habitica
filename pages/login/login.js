@@ -1,23 +1,13 @@
-let Username=document.getElementById('Username').value;
-let Password=document.getElementById('Password').value;
-let btnLogin=document.getElementById('login');
+let login = document.getElementById('login');
 
-btnLogin.addEventListener('click', function(){
+login.addEventListener('click', function () {
+  var Username = document.getElementById("Username").value;
+  var Password = document.getElementById("Password").value;
 
-    if (Password === "" ) {
-        alert("Name must be filled out");
-    }
-    else if (Username === "" ) {
-        alert("Name must be filled out");
-    }
-    else if( Password.lenght<=5){
-        alert("There are not enough characters");
-            }
-            else if( Username.lenght<=5){
-                alert("There are not enough characters");
-            }
-                    location.replace('/pages/home/home.html');
-                
-                    
-})
-   
+  if (Password === "" || Username === "") 
+    alert("Both username and password must be filled out");
+   else {
+    window.location.replace('/pages/home/home.html');
+   }
+
+});
